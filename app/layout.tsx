@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "globalStyles/globals.css";
-import  Vector46  from "assets/Vector 46.png";
-import efskólinn from "assets/efskólinn.png";
-
+import logo from "../public/logo.svg";
+import Image from "next/image";
 
 const poppins = Poppins({ weight: "400", style: "normal", subsets: ["latin"] });
 // trigger rebuild
@@ -25,8 +24,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body>
-        <img src={logo.src}></img> 
-        
+        <Image height={200} width={200} src={logo}></Image> 
       </body>
     </html>
   );
